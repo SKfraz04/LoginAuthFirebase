@@ -1,0 +1,28 @@
+.container{
+  max-width: 800px;
+}
+ul.list_name {
+  display: flex;
+  list-style: none;
+  margin: auto;
+  max-width: 1200px;
+  margin-top: 10px;
+  padding-left: 0;
+}
+li.list_link {
+  text-decoration: none;
+  margin-right: 20px;
+}
+.list_link a{
+text-decoration: none;
+}
+/* .list_name img{
+  margin-top: -7px;
+} */
+.center_list{
+  display: flex;
+  margin: auto;
+}
+.center_list:last-child{
+margin-right: 0px;
+}

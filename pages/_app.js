@@ -1,19 +1,27 @@
+import React, { useState } from "react";
 import Navbar from "../Components/navbar";
 import { AuthContextProvider } from "../context/AuthContext";
 import "../styles/globals.css";
+import "../styles/navbar.css"
 
-function MyApp({ Component, pageProps }) {
+
+const MyApp = ({ Component, pageProps }) => {
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+  };
+
   return (
-    <AuthContextProvider>
-      <Navbar>
-        <Component {...pageProps} />
-      </Navbar>
+    <AuthContextProvider value={{ isLoggedIn, handleLogout }}>
+      <Navbar />
+      <Component {...pageProps} />
     </AuthContextProvider>
   );
-}
-
+};
 
 export default MyApp;
+
 
 
 // import "../styles/globals.css";

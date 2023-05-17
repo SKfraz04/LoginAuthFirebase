@@ -55,3 +55,4 @@ export const AuthContextProvider = ({ children }: { children: React.ReactNode })
     </AuthContext.Provider>
   );
 };
+
